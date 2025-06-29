@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 DATABASE :
 
 A database is an organized collection of data that you can easily access, manage, and update.
@@ -33,3 +34,44 @@ Key Characteristics of HEAP MEMORY:
 Dynamically allocated: Memory is requested using commands like new (C++/Java) or malloc() (C), and released with delete or free().
 Global access: Any part of the program can access heap memory via pointers or references.
 Manual management: In languages like C/C++, you must explicitly free heap memory to avoid memory leaks.
+STACK MEMORY is a region of memory that stores temporary variables created by functions.
+ It operates in a Last In, First Out (LIFO) manner, meaning the last variable added is the first one removed.
+
+ example- int arr[1000]; // Allocated on the stack
+=======
+DATABASE :
+
+A database is an organized collection of data that you can easily access, manage, and update.
+
+Data structures—like arrays, linked lists, stacks, trees, and graphs—are typically used in RAM (main memory).
+RAM (Random Access Memory) is volatile, which means all the data stored in it disappears once the power goes off or the system shuts down.
+ It's super fast, but not meant for long-term storage.
+
+So, where does a database fit in?
+Most traditional databases (like MySQL, PostgreSQL, or Oracle) store their data on hard drives or SSDs—non-volatile storage.
+ This ensures your data survives between reboots and is permanently saved unless deliberately deleted.
+
+DATA WAREHOUSE:
+
+A data warehouse is a centralized system designed to store, manage, and analyze large volumes of historical data from multiple sources.
+ It’s built specifically for business intelligence (BI) and decision-making, not for day-to-day operations like a regular database.
+
+- In simple terms dataware house is basically managing past data differently so that the present data can be efficiently managed.
+
+BIG DATA:
+
+It refers to extremely large and complex datasets that are difficult to process using traditional data management tools.
+
+* Database ,data warehouse and bigdata our different from datastructures no detailed explaination of these is required for now.
+
+HEAP/STACK MEMORY:
+HEAP MEMORY is a region of a computer’s memory used for dynamic memory allocation—meaning memory that’s allocated at runtime, not in advance.
+ It’s different from STACK memory(LIFO), which is used for function calls and local variables.
+
+ example- int* arr = new int[1000]; // Allocated on the heap
+
+Key Characteristics of HEAP MEMORY:
+Dynamically allocated: Memory is requested using commands like new (C++/Java) or malloc() (C), and released with delete or free().
+Global access: Any part of the program can access heap memory via pointers or references.
+Manual management: In languages like C/C++, you must explicitly free heap memory to avoid memory leaks.
+>>>>>>> 25c6d50dea5944f842ed73ef37a9c353b56c2be4

@@ -1,0 +1,90 @@
+STATIC AND DYNAMIC ARRAYS
+
+    STATIC ARRAYS refers to arrays that have a fixed size and cannot be resized after they are created.
+    and the elements are indexable from range[0,size-1]...
+    
+    indexable means that we can access the elements of the array using their index...
+    use of static arrays:
+    1. when the size of the array is known at compile time and does not change during the program execution
+    2. when the array is small and does not require dynamic memory allocation
+    3. when the array is used for simple data structures like stacks, queues, and linked lists
+    4. when the array is used for simple algorithms like sorting and searching
+    5. when the array is used for simple data structures like trees and graphs
+    
+    now lets talk about complexity analysis of static arrays:
+    there can only be two types of algorithms that can be applied on static arrays:
+    1. Access :
+        accessing an element in a static array by index takes O(1) time complexity
+        because we can directly access the element at a specific index without iterating through the array
+        for example:
+        int arr[5] = {1,2,3,4,5};
+        int x = arr[2]; // accessing the element at index 2
+        here it takes the same amount of time to access the element at index 2 regardless of the size of the array
+
+        0(1) means constant time complexity
+
+    2.search :
+        searching for an element in a static array takes O(n) time complexity
+        because we have to check each element one by one until we find the element we are looking for
+        more the elements in the array, more time it will take to find the element
+        so the time taken grows linearly with the size of the input
+        for example:
+        int arr[5] = {1,2,3,4,5};
+        int x = 3;
+        for(int i=0; i<5; i++) {
+            if(arr[i] == x) {
+                // found the element
+            }
+        }
+        here we have to check each element one by one until we find the element we are looking for
+        so the time taken grows linearly with the size of the input
+
+    DYNAMIC ARRAYS refers to arrays that can be resized during the program execution .
+    and the elements are indexable from range[0,size-1]...
+
+    to make a dynamic array, we need to allocate memory for the array at runtime using dynamic memory allocation
+    in cpp we can use the new operator to allocate memory for a dynamic array
+    and the delete operator to deallocate memory for a dynamic array
+
+    use of dynamic arrays:
+    1. when the size of the array is not known at compile time and can change during the program execution
+    2. when the array is large and requires dynamic memory allocation
+    3. when the array is used for complex data structures like trees and graphs
+    4. when the array is used for complex algorithms like sorting and searching
+    5. when the array is used for complex data structures like stacks, queues, and linked lists
+
+    now lets talk about complexity ananlysis of dynamic arrays:
+    we can do many operations on dynamic arrays like:
+                     time complexity
+    1. Access           O(1)
+    2. Search           O(n)
+    3. Insert           O(n)
+    4. Delete           O(n)
+    5.appending         O(1) 
+
+
+as we know to access an element in a dynamic array by index takes O(1) time complexity
+because we can directly access the element at a specific index without iterating through the array
+
+and in search
+searching for an element in a dynamic array takes O(n) time complexity
+because we have to check each element one by one until we find the element we are looking for
+
+and in insert 
+inserting an element in a dynamic array takes O(n) time complexity
+because we have to shift all the elements after the insertion point to the right
+
+and in delete
+deleting an element in a dynamic array takes O(n) time complexity
+because we have to shift all the elements after the deletion point to the left
+
+and in appending
+appending an element to a dynamic array takes O(1) time complexity
+because we can add the element to the end of the array without shifting any elements
+In case the array is full, we have to allocate a new array with double the size and copy the elements from the old array to the new array
+this takes O(n) time complexity...
+
+
+    
+
+    
