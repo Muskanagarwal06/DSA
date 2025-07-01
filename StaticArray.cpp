@@ -3,7 +3,15 @@
 
 
 using namespace std;
-
+void search(string names[], int size, string name) {
+    for(int i = 0; i < size; i++) {
+        if(names[i] == name) {
+            cout << "Found " << name << " at index " << i << endl;
+            return;
+        }
+    }
+    cout << name << " not found in the array." << endl;
+}
 int main() {
     int size;
     cout<<"enter the size : ";
@@ -13,10 +21,22 @@ int main() {
     for(int i = 0;i<size;i++){
         cin>>names[i];
     }
-    cout<<"names : "<<endl;
+    cout<<"names : "<<"[ ";
     for(int i = 0;i<size;i++){
         
-        cout<<names[i]<<endl;
+        cout<<names[i]<<" ";
     }
-    return 0;
+    cout<<"]"<<endl;
+    
+    string resp;
+    cout<<"Searching for a name ? ";
+    cin>>resp;
+    if(resp =="yes" || resp == "Yes" || resp == "YES"){
+        string name;
+        cout<<"enter the name : ";
+        cin>>name;
+        search(names,size,name);
+    }
+    
 }
+
