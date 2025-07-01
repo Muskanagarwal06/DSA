@@ -1,0 +1,46 @@
+>> STL: STL stands for Standard Template Library in C++. 
+   It is a powerful set of C++ template classes that provides common data structures and algorithms, saving time and effort when writing code.
+   Common data structures like Vector, Queue , Stack, Set.\
+
+Vector is array like data structure but dynamic in nature.
+Dynamic here means vector do not have fixed size it's size can be changed.
+#include<vector>     ( in header files.)
+
+Vector Syntax:
+
+vector<int> vec;     (size=0)
+or
+vector<int> vec={1,2,3}   (size=3)
+or
+vector<int> vect(5,7)        (size=5 and value at every index is 7)
+
+Can iterate through vector using for-each loop
+Syntax:
+for(int val: vect){
+    cout<<val<<" ";
+}
+output: 7 7 7 7 7 
+
+Vector Functions:              //Usecase of all these is shown in vector.cpp file
+
+1) size
+Returns the size of the vector.
+eg.
+vector<int> vec={1,2,3}
+cout<<vec.size();            //output: 3
+
+2) push_back
+Adds an element to the end of the vector and increases its size by 1.
+
+3) pop_back
+Deletes an element from the end of vector and decreases its size by 1.
+
+4) front
+Returns value at first index of vector.
+
+5) back
+Returns value at last index of vector.
+
+6) at
+This is  similar to accessing a value at particular index.
+vect[0] and vect.at(0) both will give the same outputs.
