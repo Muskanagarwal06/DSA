@@ -19,3 +19,5 @@ int main(){
     int size= sizeof(arr)/sizeof(int);
     isUnique(arr,size);
 }
+
+Output:  1 56 8 -4 7 4
