@@ -3,6 +3,27 @@
 
 using namespace std;
 
+void addName(string*& DArr,int &size,string newName){
+    string *temp = new string[size+1];
+    for(int i = 0;i<size;i++){
+        temp[i] = DArr[i];
+
+    }
+    temp[size] = newName;
+    delete[] DArr;
+     
+    DArr = temp;
+    ++size;
+
+
+}
+void searchName(string *& DArr ,int &size,string nametosearch){
+    for(int i = 0;i<size;i++){
+        if(DArr[i] == nametosearch){
+            cout<<"Name found at index : "<<i<<endl;
+        }
+    }
+}
 int main() {
     int n = 5;
     string* DArr = new string[n]; // Initial allocation for 5 names
@@ -12,50 +33,53 @@ int main() {
         cin >> DArr[i];
     }
 
-    string input; // Declare input variable here
-
-    while (true) {
-        cout << "Do you want to add more elements? (yes/no): ";
-        cin >> input;
-
-        if (input == "yes") {
-            string newName;
-            cout << "Enter new name to add: ";
-            cin >> newName;
-
-            // Create a new, larger temporary array
-            string* temp = new string[n + 1];
-
-            // Copy existing elements from old array to new temporary array
-            for (int i = 0; i < n; i++) {
-                temp[i] = DArr[i];
-            }
-
-            // Add the new name to the end of the temporary array
-            temp[n] = newName;
-
-            // Delete the old array to free memory
-            delete[] DArr;
-
-            // Point DArr to the new, larger array
-            DArr = temp;
-
-            // Increment the size counter
-            ++n;
-        } else if (input == "no") {
-            break; // Exit the loop if the user enters "no"
-        } else {
-            cout << "Invalid input. Please enter 'yes' or 'no'." << endl;
-            // Optionally, you might want to clear the input buffer here if you
-            // anticipate issues with malformed input, but for simple 'yes/no'
-            // responses, it's often not strictly necessary.
-        }
-    }
+    string resp; // Declare input variable here
 
     cout << "\n--- All Names ---" << endl;
     for (int i = 0; i < n; i++) {
         cout << DArr[i] << endl;
     }
+
+    while (true) {
+        cout << "select operation"<<endl;
+        cout<<"Search"<<endl;
+        cout<<"Add"<<endl;
+        cout<<"Exit"<<endl;
+
+        cin >>resp;
+
+        if (resp == "add" || resp == "Add") {
+            
+            string newName;
+            cout << "Enter new name to add: ";
+            cin >> newName;
+
+            addName(DArr, n, newName);
+            
+        }
+         else if (resp == "search" || resp == "Search"){
+            string Sname;
+            cout<<"enter name to search : ";
+            cin>>Sname;
+            searchName(DArr,n,Sname); // Exit the loop if the user enters "no"
+        }
+        else if(resp == "exit" || resp == "Exit"){
+            break;
+        }
+        else {
+            cout << "Invalid input. Please select Above operations ." << endl;
+            // Optionally, you might want to clear the input buffer here if you
+            // anticipate issues with malformed input, but for simple 'yes/no'
+            // responses, it's often not strictly necessary.
+        }
+    }
+    cout << "\n--- All Names ---" << endl;
+    for (int i = 0; i < n; i++) {
+        cout << DArr[i] << endl;
+    }
+
+
+    
 
     // Don't forget to free the dynamically allocated memory
     delete[] DArr;
