@@ -1,0 +1,25 @@
+Time Complexity:
+Not the actual time taken but amount of time taken as function of input size(n).
+
+Big O Notation gives Worst Case Time Complexity(Upper Bound).
+Theta represents Average Case Time Complexity.
+Omega represents Best Case TIme Complexity(Lower Bound).
+
+Space Complexity:
+Amount of time taken by an algorithm as function of input size(n).
+
+Common Time Complexities:
+O(1) -> Constant
+O(logn) -> Binary Search
+O(n) -> Linear
+O(nlogn) -> Sorting
+O(n^2) 
+O(n^3)
+O(2^n) -> Recursion
+O(n!)
+
+Recursion(Factorial)-> Time Complexity: O(n)
+Space Complexity: Height of call stack * Memory in each call -> n*k -> O(n)
+
+Recursive Fibonacci -> Time Complexity: O(2^n)
+Space Complexity: O(n)
