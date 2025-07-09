@@ -1,0 +1,23 @@
+Linked List refers to where each element (node) contains a reference (link) to the next node in the sequence.
+and the elements are not stored in contiguous memory locations.
+
+
+In Linked List we can add elements at the beginning, end, or any position in the list. without shifting other elements like in arrays.
+ Linked List is a dynamic data structure that can grow and shrink in size as needed.
+ It consists of nodes, where each node contains data and a reference to the next node.
+Linked List is a linear data structure that consists of a sequence of nodes.
+
+but it has some disadvantages compared to arrays:
+1. Memory Overhead: Each node requires additional memory for storing the reference to the next node, which can lead to higher memory usage compared to arrays.
+2. Insertion and Deletion Complexity: While insertion and deletion operations are efficient, they require traversing the list to find the appropriate position, which can take O(n) time in the worst case.
+
+3. Random Access: Linked lists do not support random access to elements, meaning you cannot directly access an element by its index like you can with arrays. You must traverse the list from the head to reach a specific node.
+
+a sample implementation of link list is :
+
+struct Node {
+    int data;
+   struct Node* next; <----- This is self-referential structure
+
+};
+
