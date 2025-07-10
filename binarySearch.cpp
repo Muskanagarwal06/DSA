@@ -34,7 +34,7 @@ int main(){
 
 
 //Recursive Binary Search
-//Time Complexity: o(logn)
+//Time Complexity: O(logn)
 //Space Complexity: O(logn)
 // int binarySearch(vector<int> vect, int target, int start, int end){
 //     int mid=start+((end-start)/2);
