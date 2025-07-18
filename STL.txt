@@ -1,0 +1,127 @@
+C++ STL(Standard Template Library)
+-> Containers
+-> Iterators
+-> Algorithms
+-> Functors
+
+Containers
+(1). VECTORS (dynamic array)
+
+Time Complexity: O(1)
+-size & capacity
+-push_back & pop_back
+-emplace_back
+-at() or []
+-front & back
+
+Time Complexity: O(n)
+-erase  
+eg - vect.erase(vect.begin())
+It changes the size of  vector but not the capacity.
+
+-insert
+eg - vect.insert(vect.begin() + 2, 100)
+
+-clear
+eg - vect.clear()
+It clears all the elements in the vector.But the capacity remains same.
+
+Time Complexity: O(1)
+-empty
+eg - vect.empty()
+returns 1 or 0 .
+
+Iterators
+-vect.begin() : Points towards 0th index
+-vect.end() : Poits towards (last +1) index , not the last index.
+
+(2). LISTS (doubly linked list)
+
+list<int> l={1,2,3}
+- push_back & push_front
+- pop_back & pop_front
+- emplace_back & emplace_front
+- erase , clear, size , begin , end, rbegin, rend, insert, front , back
+
+(3). DEQUE : Double Ended Queue  (random access is possible)
+deque<int> d={1,2,3}
+- push_back & push_front
+- pop_back & pop_front
+- emplace_back & emplace_front
+- erase , clear, size , begin , end, rbegin, rend, insert, front , back
+
+(4). PAIR
+pair<int, int> p={1,1}
+
+(5). STACK (Non-sequential)(LIFO)
+stack<int> s;
+- push, emplace, size, pop , top, empty, swap.
+
+(6). QUEUE (FIFO)
+queue<int> q;
+-push ,emplace, front, pop, empty, swap.
+
+(7). PRIORITY QUEUE
+priority_queue<int> p;
+- push , emplace, pop -> Time Complexity: O(logn)
+- top, size, empty
+
+(8). MAP (key,value)(Time Complexity: O(logn))
+keys are unique and map is sorted(ascending) with reference to keys.
+map<string,int> m;
+m[key]=value;
+-emplace , insert, erase, find (if not exists it returns m.end()) , size, empty
+- count : returns either 0 or 1
+
+-> MULTI MAP
+Multiple keys with same value can exists.
+
+-> UNORDERED MAP(Time Complexity: O(1))
+not sorted
+
+(9). SET(Time Complexity: O(logn))
+Stores unique values and in sorted order.
+set<int> s;
+- insert, emplace,size,cound,find,empty,erase
+- lower_bound & upper_bound
+
+-> MULTI SET
+mutiset<int> ms;
+
+-> UNORDERED SET (Time Complexity: O(1))
+not sorted
+unordered_set<int> us;
+
+
+Algorithms
+
+1)Sorting
+sort(arr,arr+n)
+sort(arr,arr+n,greater<int>())   : here greater is a comparator 
+sort(v.begin(),v.end())
+sort(v.begin(),v.end(),comparator) : here comparator is a custom comparator
+
+2)Reverse
+reverse(v.begin(),v.end())
+
+3)Next Permutation
+next_permutation(v.begin(),v.end())
+
+4)Previous Permutation
+prev_permutation(v.begin(),v.end())
+
+4)swap, min, max
+
+5)Max & Min elements
+max_element(v.begin(),v.end())   //Return the Iterator
+min_element(v.begin(),v.end())
+
+6)Binary Search
+binary_search(v.begin(),v.end(),target)
+
+7)Count Set Bits
+__builtin_popcount()
+__builtin_popcountl()
+__builtin_popcountll()
+
+
